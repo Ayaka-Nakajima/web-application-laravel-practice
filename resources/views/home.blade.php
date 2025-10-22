@@ -104,18 +104,23 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <ul class="list-unstyled mb-0">
+                                @foreach($categories as $category)
+                                    {{-- nameを指定して取得するように変更したので、$category->nameでアクセス --}}
+                                    <li><a href="#!">{{ $category->name }}</a></li>
+                                @endforeach
+                                {{-- もともとあったものはこれ。動的に入れるため、削除
                                 <li><a href="#!">Web Design</a></li>
                                 <li><a href="#!">HTML</a></li>
-                                <li><a href="#!">Freebies</a></li>
+                                <li><a href="#!">Freebies</a></li> --}}
                             </ul>
                         </div>
-                        <div class="col-sm-6">
+                        {{-- <div class="col-sm-6">
                             <ul class="list-unstyled mb-0">
                                 <li><a href="#!">JavaScript</a></li>
                                 <li><a href="#!">CSS</a></li>
                                 <li><a href="#!">Tutorials</a></li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
