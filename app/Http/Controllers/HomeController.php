@@ -9,6 +9,7 @@ class HomeController extends Controller
 {
     public function index()
     {
+        //ここでDBファサードを使ってcategoriesテーブルから全てのカテゴリを取得
         $allCategories = DB::table('categories')->get();
         //hardcoded categories for demonstration; in a real app, these might come from a database
         //$allCategories = ['category1', 'category2', 'category3'];
