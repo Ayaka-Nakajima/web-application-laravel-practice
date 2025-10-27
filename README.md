@@ -6,8 +6,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+
 ## About the repository
-2025秋学期　WebApplicationの授業で使用している備忘録です。
+### 2025秋学期　WebApplicationの授業で使用している備忘録です。
 
 ## About Laravel
 
