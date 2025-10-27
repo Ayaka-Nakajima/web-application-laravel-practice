@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 //controllerを使ってルーティングを設定
@@ -19,3 +20,8 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
+// PostControllerのshowメソッドへのルーティング設定
+//postIdパラメータをURLから受け取る
+//nameでルートに名前を付けることで、後でURL生成やリダイレクトに便利に使えます
+Route::get('/posts/{post}', [PostController::class, 'show'])->name('post.show');

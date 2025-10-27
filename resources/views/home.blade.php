@@ -19,12 +19,14 @@
         <div class="col-lg-8">
             @foreach ($posts as $post)
             <div class="card mb-4">
-                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
+                <!-- 投稿の詳細ページへのリンクを画像に対しても生成 -->
+                <a href="{{ route('post.show', $post->id) }}"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
                 <div class="card-body">
                     <!--仮に$postsが単一の投稿オブジェクトであると仮定しています-->
                     <h2 class="card-title h4">{{ $post->title }}</h2>
                     <p class="card-text">{{ Str::limit($post->text, 80) }}</p>
-                    <a class="btn btn-primary" href="#!">Read more →</a>
+                    <!-- 投稿の詳細ページへのリンクを生成 -->
+                    <a class="btn btn-primary" href="{{ route('post.show', $post->id) }}">Read more →</a>
                 </div>
             </div>
             @endforeach
